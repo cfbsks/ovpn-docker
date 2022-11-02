@@ -28,6 +28,7 @@ sudo docker run --name $OVPN_DATA -v /etc/openvpn busybox
 
 # 配置文件/密钥对生成
 # generate an ovpn-server config file and pki
+# server name/passphrase required
 sudo docker run --volumes-from $OVPN_DATA --rm kylemanna/openvpn ovpn_genconfig -u udp://$HOST_NAME:$HOST_PORT
 sudo docker run --volumes-from $OVPN_DATA --rm -it kylemanna/openvpn ovpn_initpki
 
@@ -37,6 +38,7 @@ sudo docker run --volumes-from $OVPN_DATA --restart=always --name ovpn-runtime -
 
 # 客户端密钥对/配置文件生成
 # generate a cient key and a client config file
+# server passphrase required
 sudo docker run --volumes-from $OVPN_DATA --rm -it kylemanna/openvpn easyrsa build-client-full $CLIENT_NAME nopass
 sudo docker run --volumes-from $OVPN_DATA --rm kylemanna/openvpn ovpn_getclient $CLIENT_NAME > $CLIENT_NAME@$HOST_NAME.ovpn
 ```
