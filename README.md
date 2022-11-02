@@ -43,3 +43,9 @@ sudo docker run --volumes-from $OVPN_DATA --rm -it kylemanna/openvpn easyrsa bui
 sudo docker run --volumes-from $OVPN_DATA --rm kylemanna/openvpn ovpn_getclient $CLIENT_NAME > $CLIENT_NAME@$HOST_NAME.ovpn
 ```
 > reference: "https://www.digitalocean.com/community/tutorials/how-to-run-openvpn-in-a-docker-container-on-ubuntu-14-04?utm_source=githubreadme"
+
+下载客户端配置文件需通过安全的信道 如sftp  
+Download <ClientName>.ovpn via secure channel.  
+
+> https://openvpn.net/vpn-client/
+  
