@@ -1,5 +1,11 @@
 # ovpn-docker
 Initialize an ovpn-server container quickly
+## auto-deploy
+- download auto-delpoy-shellscript  
+- change variables in `main.sh`  
+- execute `main.sh`
+
+## manually deploy
 ```
 # docker 安装 国际流量
 # install docker 
