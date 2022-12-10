@@ -1,5 +1,6 @@
 #! /bin/sh
 
+# Make sure expect is installed.
 # Before excuting, make sure your docker is installed.
 # Make sure the container's name is unique
 
