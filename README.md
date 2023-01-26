@@ -1,7 +1,6 @@
 # ovpn-docker
 Initialize an ovpn-server container quickly
 ## auto-deploy
-- install expect
 - download [auto-delpoy-shellscript](https://github.com/cfbsks/ovpn-docker/releases/download/auto-deploy/autovpn.zip)  
 - change variables in `main.sh`  
 - execute `main.sh`
