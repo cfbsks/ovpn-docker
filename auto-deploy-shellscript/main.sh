@@ -24,4 +24,5 @@ export TRANSPORT_PROTOCOL
 export CA_PASSPHRASE
 export CA_NAME
 
+apt update && apt install expect
 ./exauto.sh
